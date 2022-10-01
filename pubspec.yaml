@@ -2,9 +2,9 @@ name: modulo
 description: The design system of the club APP|ETS.
 version: 0.0.1
 homepage: https://clubapplets.ca/
-repository: https://github.com/ApplETS/ETS-API-Clients
-issue_tracker: https://github.com/ApplETS/ETS-API-Clients/issues
-documentation: https://github.com/ApplETS/ETS-API-Clients
+repository: https://github.com/ApplETS/Modulo
+issue_tracker: https://github.com/ApplETS/Modulo/issues
+documentation: https://github.com/ApplETS/Modulo
 
 
 environment:
@@ -19,5 +19,5 @@ dev_dependencies:
   flutter_test:
     sdk: flutter
   flutter_lints: ^2.0.0
-  
+
 flutter:
