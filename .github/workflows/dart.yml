@@ -79,10 +79,10 @@ jobs:
         uses: dart-lang/setup-dart@v1
 
       - name: 📦 Install Dependencies
-        run: dart pub get
+        run: flutter pub get
 
       - name: ✨ Formatting lib and test directories
-        run: dart format lib test
+        run: flutter format lib test
 
       - name: ✉️ Commit formatted files
         uses: stefanzweifel/git-auto-commit-action@v4
@@ -93,7 +93,7 @@ jobs:
           add_options: '-u'
 
       - name: 🕵️ Analyze
-        run: dart analyze --fatal-warnings lib test
+        run: flutter analyze --fatal-warnings lib test
 
       - name: 🧪 Run Tests
         run: |
