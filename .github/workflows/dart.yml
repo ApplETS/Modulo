@@ -127,7 +127,7 @@ jobs:
           add_options: '-u'
   pre_release:
     name: Pre-release the package on Github.
-    if: ${{ github.event_name == 'push' || (github.event_name == 'workflow_dispatch' && github.ref == 'refs/heads/main') }}
+    if: ${{ github.event_name == 'push' || (github.event_name == 'workflow_dispatch' && github.ref == 'refs/heads/master') }}
     needs:
       - tag_validation
       - build
