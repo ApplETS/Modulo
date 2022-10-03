@@ -110,15 +110,7 @@ jobs:
         with:
           name: lcov.info
           path: ${{ github.workspace }}/coverage/lcov.info
-      - name: Get code coverage
-        #        if: ${{ github.event_name == 'push' }}
-        id: coverage
-        run: |
-          chmod +x ./scripts/determine_code_coverage.sh
-          export COV="$(./scripts/determine_code_coverage.sh coverage/lcov.info)"
-          echo "Coverage detected is: $COV"
-          echo "::set-output name=percentage::$COV"
-
+          
       - name: 💬 Comment coverage details on the PR
         if: ${{ github.event_name == 'pull_request' }}
         uses: romeovs/lcov-reporter-action@v0.2.21
