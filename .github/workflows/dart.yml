@@ -77,6 +77,14 @@ jobs:
 
       - name: 🎯 Setup Dart
         uses: dart-lang/setup-dart@v1
+        
+      - name: 🪤 Setup Flutter
+        uses: subosito/flutter-action@v2
+        with:
+          flutter-version: '3.0.x'
+          channel: 'stable'
+          cache: true
+      - run: flutter doctor
 
       - name: 📦 Install Dependencies
         run: flutter pub get
