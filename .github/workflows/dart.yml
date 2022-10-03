@@ -103,10 +103,21 @@ jobs:
         run: flutter analyze --fatal-warnings lib test
 
       - name: 🧪 Run Tests
+        run: flutter test --coverage
+        
+      - name: Upload coverage file
+        uses: actions/upload-artifact@v3
+        with:
+          name: lcov.info
+          path: ${{ github.workspace }}/coverage/lcov.info
+      - name: Get code coverage
+        #        if: ${{ github.event_name == 'push' }}
+        id: coverage
         run: |
-          pub global activate test_coverage
-          export PATH=$PATH:$HOME/.pub-cache/bin
-          test_coverage
+          chmod +x ./scripts/determine_code_coverage.sh
+          export COV="$(./scripts/determine_code_coverage.sh coverage/lcov.info)"
+          echo "Coverage detected is: $COV"
+          echo "::set-output name=percentage::$COV"
 
       - name: 💬 Comment coverage details on the PR
         if: ${{ github.event_name == 'pull_request' }}
