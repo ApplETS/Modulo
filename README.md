@@ -1,39 +1,43 @@
-<!--
-This README describes the package. If you publish this package to pub.dev,
-this README's contents appear on the landing page for your package.
+<div align="center">
+  <img src="https://d33wubrfki0l68.cloudfront.net/05095d995ef6b2ddc419a51a22cad5e975f4072b/2d081/images/logo_blanc_applets.png" />
+  <p>
+    <br /><strong>Modulo Project</strong>
+  </p>
+</div>
 
-For information about how to write a good package README, see the guide for
-[writing package pages](https://dart.dev/guides/libraries/writing-package-pages).
+This project is the design system for the all the application write in flutter of the student club [ApplETS](https://clubapplets.ca/).
 
-For general information about developing packages, see the Dart guide for
-[creating packages](https://dart.dev/guides/libraries/create-library-packages)
-and the Flutter guide for
-[developing packages and plugins](https://flutter.dev/developing-packages).
--->
+## Technologies used
 
-TODO: Put a short description of the package here that helps potential users
-know whether this package might be useful for them.
+* [Flutter](https://flutter.dev)
 
-## Features
+## Requirements
 
-TODO: List what your package can do. Maybe include images, gifs, or videos.
+- Flutter SDK v3.3.3
+```sh
+# to downgrade flutter version to the required version, simply do:
+$ flutter downgrade 3.3.3
+```
+- Openssl v1.1.1g or higher
 
-## Getting started
+## Clone the github
 
-TODO: List prerequisites and provide or point to information on how to
-start using the package.
+If you want to edit this repo easily clone this repo : https://github.com/ApplETS/Modulo-Preview
 
-## Usage
+## Use the librairy in your project
 
-TODO: Include short and useful examples for package users. Add longer examples
-to `/example` folder.
+Add those lines to your pubspec.yaml
 
-```dart
-const like = 'sample';
+```
+dependencies:
+  modulo:
+      git:
+        url: [https://github.com/ApplETS/ETS-API-Clients.git](https://github.com/ApplETS/Modulo)
+        ref: specify the version (ex: 0.0.1)
 ```
 
-## Additional information
 
-TODO: Tell users more about the package: where to find more information, how to
-contribute to the package, how to file issues, what response they can expect
-from the package authors, and more.
+## ⚖️ License
+
+This projet is licensed under the GNU General Public License v2.0. See
+the [LICENSE](https://github.com/ApplETS/Modul/blob/main/LICENCE) file for more info.
