@@ -40,4 +40,4 @@ dependencies:
 ## ⚖️ License
 
 This projet is licensed under the GNU General Public License v2.0. See
-the [LICENSE](https://github.com/ApplETS/Modulo/blob/main/LICENCE) file for more info.
+the [LICENSE](https://github.com/ApplETS/Modulo/blob/main/LICENSE) file for more info.
